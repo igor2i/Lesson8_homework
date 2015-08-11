@@ -30,7 +30,7 @@ public class Logs<E extends String> extends ArrayDeque<String> {
     }
 
 
-    public int lenght(){
+    public int lenghtL(){
         return this.stackLog.size();
     }
 

@@ -8,7 +8,7 @@ import java.util.Collection;
 import java.util.Collections;
 
 /**
- * Created by igor2i on 07.08.2015.
+ * создание словаря по введенному тексту
  */
 public class MainS {
 
@@ -16,9 +16,9 @@ public class MainS {
 
         Prevetstvie.getPrevetstvieS();
 
-        Slovar<String> slovar = new Slovar<>();
-
         Logs<String> logs = new Logs<>();
+
+        Slovar<String> slovar = new Slovar<>();
 
         try {
 
@@ -33,6 +33,8 @@ public class MainS {
                     } else if ("print".equals(scan)) {
                         slovar.print();
                         continue;
+                    } else if ("err".equals(scan)) {
+                        throw new ArithmeticException();
                     }
 
                     Collections.addAll(slovar, scan.split(" "));
@@ -40,22 +42,19 @@ public class MainS {
                     slovar.print();
 
                 } catch (Exception ex) {
-                    logs.pushLog(ex.getMessage());
+                    System.out.println("Error " + ex.toString());
+                    logs.pushLog("MainS  " + ex.toString());
                 }
             }
 
-            if(logs.lenght()> 0){
-                return logs.allPop();
-            }else {
-                return null;
-            }
+            return logs.allPop();
 
-        } catch (Exception ex){
-            if(logs.lenght()> 0){
-                return logs.allPop();
-            }
-            throw ex;
-        } finally{
+        } catch (Exception ex) {
+            System.out.println("Fatal error " + ex.toString());
+            logs.pushLog("MainS  fatal error" + ex.toString());
+            return logs.allPop();
+
+        } finally {
             System.out.println("Выход из Программы Словаря");
         }
     }

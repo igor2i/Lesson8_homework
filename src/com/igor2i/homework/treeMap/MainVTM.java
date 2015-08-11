@@ -9,5 +9,8 @@ public class MainVTM {
 
     public static void main(){
         Prevetstvie.getPrevetstvieVTM();
+
+
+
     }
 }

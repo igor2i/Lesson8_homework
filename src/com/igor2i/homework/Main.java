@@ -52,17 +52,17 @@ public class Main {
 
                     }
                 } catch (Exception ex) {
-                    logs.pushLog(ex.getMessage());
+                    logs.pushLog(ex.toString());
                 }
             }
 
         } catch (Exception ex) {
-            logs.pushLog(ex.getMessage());
+            logs.pushLog(ex.toString());
         }
 
 
         System.out.println("|--------------------Log Message----------------------|");
-        for (int i = 0; logs.lenght() > 0; i++) {
+        for (int i = 0; logs.lenghtL() > 0; i++) {
             System.out.println(i + "  " + logs.popLog());
         }
 

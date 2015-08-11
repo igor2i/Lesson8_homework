@@ -42,13 +42,11 @@ public class Prevetstvie {
     private static void prevetstvieLLL(){
         System.out.println("|   Цикл                                              |");
         System.out.println("|                                                     |");
-        System.out.println("|                                                     |");
         System.out.println("|   Для справки введите -  help                       |");
         System.out.println("|   Для выхода введите -  exit                        |");
     }
     private static void prevetstvieVTM(){
         System.out.println("|   Визуальное TreeMap                                |");
-        System.out.println("|                                                     |");
         System.out.println("|                                                     |");
         System.out.println("|   Для справки введите -  help                       |");
         System.out.println("|   Для выхода введите -  exit                        |");
